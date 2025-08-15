@@ -1,0 +1,44 @@
+name: Refresh Daily Deals
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 3 * * *"  # Daily at 03:15 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Create .env (optional)
+        run: |
+          echo "AFFILIATE_TAG=${{ secrets.AFFILIATE_TAG }}" >> .env
+          echo "HUGGINGFACE_API_TOKEN=${{ secrets.HUGGINGFACE_API_TOKEN }}" >> .env
+          echo "PINTEREST_ACCESS_TOKEN=${{ secrets.PINTEREST_ACCESS_TOKEN }}" >> .env
+          echo "PINTEREST_BOARD_ID=${{ secrets.PINTEREST_BOARD_ID }}" >> .env
+
+      - name: Refresh deals
+        run: python -c "import asyncio; from scripts.agents import agent_run; from scripts.write_output import write_deals; items=asyncio.run(agent_run()); write_deals(items, 'deals.json')"
+
+      - name: Commit deals.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add deals.json
+          git commit -m "chore: update deals.json" || echo "No changes"
+          git push

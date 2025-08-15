@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NeuroStart.ai — Curated Deals, Optimized by AI</title>
+  <meta name="description" content="NeuroStart.ai discovers high-value products and daily offers using agentic AI. Follow our boards for smart, trustworthy picks.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220; --card:#0f1a2e; --ink:#e8eefc; --muted:#a8b3cf; --brand:#5aa7ff; --brand-2:#7ad1ff;
+      --ring:rgba(122,209,255,.35);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#07101d 0%, #0b1424 60%, #0b1220 100%);color:var(--ink)}
+    a{color:var(--brand);text-decoration:none}
+    .container{max-width:1140px;margin:0 auto;padding:0 20px}
+    .nav{position:sticky;top:0;backdrop-filter:blur(10px);background:rgba(7,16,29,.55);border-bottom:1px solid rgba(255,255,255,.06);z-index:20}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#04101e;font-weight:800}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,var(--brand),#3a86ff);color:#04101e;font-weight:700;border:none;border-radius:12px;padding:12px 16px;box-shadow:0 12px 24px -12px var(--ring);transition:transform .15s ease,box-shadow .15s ease}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 18px 32px -12px var(--ring)}
+    .hero{padding:72px 0 40px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .grid{display:grid;gap:28px}
+    @media (min-width:900px){.grid{grid-template-columns:1.25fr 1fr}}
+    .headline{font-size:44px;line-height:1.05;margin:0 0 12px;font-weight:800}
+    .sub{color:var(--muted);font-size:18px}
+    .pillbar{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+    .pill{font-size:12px;color:#06101e;background:linear-gradient(180deg,#b9e3ff,#7ad1ff);padding:8px 10px;border-radius:999px;font-weight:700}
+    .card{background:linear-gradient(180deg,#0f1a2e,#0c1730);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:18px;box-shadow:0 12px 32px -16px rgba(0,0,0,.45)}
+    .shot{aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.07)}
+    .shot img{width:100%;height:100%;object-fit:cover}
+    .section{padding:48px 0}
+    .h2{font-size:26px;margin:0 0 14px;font-weight:800}
+    .cards{display:grid;gap:18px}
+    @media (min-width:800px){.cards{grid-template-columns:repeat(3,1fr)}}
+    .mini{font-size:14px;color:var(--muted)}
+    .list{display:grid;gap:12px;margin-top:12px}
+    .list .item{display:flex;gap:10px;align-items:flex-start}
+    .bullet{width:8px;height:8px;border-radius:999px;background:var(--brand);margin-top:7px}
+    .boards{display:grid;gap:18px}
+    @media (min-width:900px){.boards{grid-template-columns:repeat(3,1fr)}}
+    .board a{display:block}
+    .footer{border-top:1px solid rgba(255,255,255,.06);padding:22px 0;color:var(--muted);font-size:14px}
+    .disclosure{font-size:14px;color:var(--muted);line-height:1.6}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .btn-ghost{border:1px solid rgba(255,255,255,.14);color:var(--ink);padding:12px 16px;border-radius:12px;font-weight:700}
+    .note{font-size:12px;color:var(--muted);margin-top:8px}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:#0b1a33;border:1px solid rgba(255,255,255,.08);padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo">N</div>
+        <div>NeuroStart.ai</div>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="https://pinterest.com/your-handle" target="_blank" rel="noopener">Follow on Pinterest</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container grid">
+      <div>
+        <h1 class="headline">Curated Deals, <span style="background:linear-gradient(90deg,#5aa7ff,#7ad1ff);-webkit-background-clip:text;background-clip:text;color:transparent;">Optimized by AI</span></h1>
+        <p class="sub">We use agentic AI to discover high-value products, craft scroll-stopping pins, and update picks in real time. Clean, useful, and trustworthy recommendations—daily.</p>
+        <div class="pillbar">
+          <span class="pill">Beauty</span><span class="pill">Digital & Gadgets</span><span class="pill">Home</span>
+          <span class="pill">Fitness</span><span class="pill">Gifts</span><span class="pill">Pets</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn" href="https://pinterest.com/your-handle" target="_blank" rel="noopener">Explore Boards</a>
+          <a class="btn-ghost" href="mailto:hello@neurostart.ai">Partner with Us</a>
+        </div>
+        <div class="note">For affiliate reviewers: our primary platform is Pinterest. Contact: <a href="mailto:hello@neurostart.ai">hello@neurostart.ai</a></div>
+      </div>
+      <div class="card shot">
+        <img src="https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?q=80&w=1600&auto=format&fit=crop" alt="Curated products" />
+      </div>
+    </div>
+  </section>
+
+  <!-- TODAY'S DEALS SECTION -->
+  <section class="section">
+    <div class="container">
+      <h2 class="h2">Today’s Deals</h2>
+      <div id="dealGrid" class="cards"></div>
+      <p class="mini" id="dealNote"></p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="h2">How It Works</h2>
+      <div class="cards">
+        <div class="card">
+          <strong>1) Discover</strong>
+          <p class="mini">AI scans trends & product data to shortlist quality offers with strong value/commission.</p>
+        </div>
+        <div class="card">
+          <strong>2) Curate</strong>
+          <p class="mini">We verify specs, price history, and usefulness before we feature any product.</p>
+        </div>
+        <div class="card">
+          <strong>3) Create & Share</strong>
+          <p class="mini">Original visuals + captions published to Pinterest boards at peak engagement times.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED BOARDS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="h2">Featured Boards</h2>
+      <div class="boards">
+        <div class="card board">
+          <a href="https://pinterest.com/your-handle/board-one" target="_blank" rel="noopener">
+            <div class="shot"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1600&auto=format&fit=crop" alt="Audio & Smart" /></div>
+            <h3>Smart & Sound</h3>
+            <p class="mini">Headphones, speakers, smart hubs</p>
+          </a>
+        </div>
+        <div class="card board">
+          <a href="https://pinterest.com/your-handle/board-two" target="_blank" rel="noopener">
+            <div class="shot"><img src="https://images.unsplash.com/photo-1516542076529-1ea3854896e1?q=80&w=1600&auto=format&fit=crop" alt="WFH" /></div>
+            <h3>Work-From-Home Setups</h3>
+            <p class="mini">Desks, chairs, lighting, productivity</p>
+          </a>
+        </div>
+        <div class="card board">
+          <a href="https://pinterest.com/your-handle/board-three" target="_blank" rel="noopener">
+            <div class="shot"><img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?q=80&w=1600&auto=format&fit=crop" alt="Beauty" /></div>
+            <h3>Daily Beauty Deals</h3>
+            <p class="mini">Serums, sunscreens, hair essentials</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <!-- DISCLOSURE -->
+  <section class="section">
+    <div class="container">
+      <h2 class="h2">Disclosure & Ethics</h2>
+      <p class="disclosure">
+        Some links on our boards are affiliate links — if you purchase through them, NeuroStart.ai may earn a commission at no extra cost to you.
+        We only feature products we believe offer good value. Prices and availability may change — always verify on the retailer’s website.
+      </p>
+      <div class="list">
+        <div class="item"><div class="bullet"></div><div class="mini">Primary platform: Pinterest. Secondary: Instagram/Threads.</div></div>
+        <div class="item"><div class="bullet"></div><div class="mini">Contact: <a href="mailto:hello@neurostart.ai">hello@neurostart.ai</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="y"></span> NeuroStart.ai — All rights reserved.</div>
+      <div class="mini">Built with Agentic AI. <span class="kbd">v1.0</span></div>
+    </div>
+  </footer>
+ 
+  <script src="js/main.js"></script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>

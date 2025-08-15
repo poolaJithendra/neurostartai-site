@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "title": "Top vitamin C serum under ₹500",
+    "url": "https://example.com/serum",
+    "price": "₹499",
+    "image": "https://picsum.photos/seed/serum/640",
+    "source": "generic",
+    "score": 0.0,
+    "caption": "Write a concise, benefit-focused, single-sentence caption (<80 chars) for this p"
+  },
+  {
+    "title": "Best earbuds under ₹2000",
+    "url": "https://example.com/earbuds",
+    "price": "₹1,999",
+    "image": "https://picsum.photos/seed/ear/640",
+    "source": "generic",
+    "score": 0.0,
+    "caption": "Write a concise, benefit-focused, single-sentence caption (<80 chars) for this p"
+  }
+]

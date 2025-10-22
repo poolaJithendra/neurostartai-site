@@ -1,38 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NeuroStart.ai — Best Deals in India</title>
-  <meta name="description" content="AI-curated deals for India: gadgets, beauty, home, fitness — updated daily.">
-  <meta property="og:title" content="NeuroStart.ai — Best Deals in India">
-  <meta property="og:description" content="AI-curated deals for India — updated daily.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="icons/og.png">
-  <link rel="icon" href="icons/favicon.ico">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="deals.js"></script>
-  <script defer src="script.js"></script>
-  <script type="application/ld+json" id="ld"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroStart.ai — Smart Deals for India</title>
+  <meta name="description" content="AI-curated daily deals: gadgets, beauty, home & more — fast, clean, and simple.">
+  <meta property="og:title" content="NeuroStart.ai — Smart Deals">
+  <meta property="og:description" content="AI-curated daily deals, updated automatically.">
+  <meta property="og:image" content="./assets/logo.svg">
+  <link rel="icon" href="./assets/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+  <script defer src="./deals.js"></script>
 </head>
-<body>
-  <header class="wrap">
-    <div class="brand">
-      <a href="./" class="logo">🧠 NeuroStart.ai</a>
-      <span class="tag">AI-curated deals • India</span>
+<body class="bg-gradient-to-b from-slate-50 to-white text-slate-900">
+  <!-- Header inline include -->
+  <!-- Header -->
+<header class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-20">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+    <a href="./" class="flex items-center gap-2 shrink-0">
+      <img src="./assets/logo.svg" alt="NeuroStart.ai" class="w-9 h-9"/>
+      <span class="font-extrabold text-xl tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">NeuroStart.ai</span>
+    </a>
+    <div class="flex-1 hidden md:flex">
+      <div class="w-full relative">
+        <input id="search" class="w-full rounded-xl border border-slate-300 px-4 py-2.5 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Search products, brands…"/>
+        <svg class="w-5 h-5 absolute right-3 top-3 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-4.3-4.3M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+      </div>
     </div>
-    <nav class="nav">
-      <a href="./" class="navlink active">Home</a>
-      <a href="feed.xml" class="navlink">RSS</a>
-      <a href="mailto:hello@example.com" class="navlink">Contact</a>
-    </nav>
-  </header>
-
-  <section class="toolbar wrap">
-    <input id="q" class="input" placeholder="Search products, brands..." />
-    <select id="cat" class="select">
-      <option value="">All categories</option>
+    <select id="category" class="rounded-xl border border-slate-300 px-3 py-2">
+      <option value="">All</option>
       <option>Digital & Gadgets</option>
       <option>Beauty</option>
       <option>Home</option>
@@ -40,32 +38,87 @@
       <option>Gifts</option>
       <option>Pets</option>
     </select>
-    <select id="sort" class="select">
-      <option value="score">Sort by: AI score</option>
-      <option value="discount">Sort by: Discount %</option>
+    <a href="./myfeed.html" class="px-3 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:opacity-90">My Feed</a>
+    <a href="./saved.html" class="px-3 py-2 rounded-lg font-semibold border border-slate-300 text-slate-700 hover:bg-slate-50">Saved</a>
+  </div>
+</header>
+
+  <section class="max-w-7xl mx-auto px-4 mt-8">
+    <div class="rounded-3xl p-6 md:p-10 bg-white border border-slate-200 shadow-sm">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <img src="./assets/logo.svg" class="w-24 h-24 md:w-28 md:h-28" alt="logo"/>
+        <div class="flex-1">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">AI that finds India’s smartest deals</h2>
+          <p class="text-slate-600 mt-2">Zero noise, pure value. Save time. Save money. Save your sanity.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">#BudgetBuys</span><span class="chip">#OfferAlert</span><span class="chip">#Gadgets</span><span class="chip">#Beauty</span><span class="chip">#Home</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="max-w-7xl mx-auto px-4 mt-6 flex items-center gap-3">
+    <select id="sort" class="rounded-xl border border-slate-300 px-3 py-2">
+      <option value="score">Sort: AI score</option>
+      <option value="discount">Sort: Discount %</option>
       <option value="price_low">Price: Low → High</option>
       <option value="price_high">Price: High → Low</option>
       <option value="new">Newest</option>
     </select>
-    <button id="dark" class="btn">🌓</button>
+    <button id="toggleTheme" class="px-3 py-2 rounded-lg border border-slate-300">🌙 Dark</button>
+    <button id="viewSaved" onclick="location.href='saved.html'" class="px-3 py-2 rounded-lg border border-slate-300">❤️ Saved</button>
   </section>
-
-  <main class="wrap">
-    <div id="grid" class="grid"></div>
+  <main class="max-w-7xl mx-auto px-4 mt-4">
+    <div id="grid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
   </main>
+  <!-- Deal Modal -->
+<div id="dealModal" class="fixed inset-0 hidden items-center justify-center z-30">
+  <div class="absolute inset-0 bg-black/50" data-close-modal></div>
+  <div class="relative bg-white rounded-2xl shadow-2xl max-w-3xl w-[92%] overflow-hidden">
+    <div class="flex flex-col md:flex-row">
+      <img id="modalImage" src="" alt="" class="md:w-1/2 h-64 md:h-auto object-cover">
+      <div class="p-5 md:w-1/2">
+        <h3 id="modalTitle" class="text-xl font-bold"></h3>
+        <p id="modalDesc" class="text-slate-600 mt-2 text-sm"></p>
+        <div class="flex items-center gap-3 mt-3">
+          <span id="modalPriceNow" class="text-2xl font-extrabold text-blue-700"></span>
+          <span id="modalPriceWas" class="line-through text-slate-500"></span>
+          <span id="modalOff" class="ml-auto inline-block px-2 py-1 rounded-full text-xs bg-blue-50 text-blue-700 border border-blue-200"></span>
+        </div>
+        <div class="mt-4 grid grid-cols-2 gap-2">
+          <button id="btnSaveModal" class="btn-secondary">❤️ Save</button>
+          <button id="btnAlertModal" class="btn-secondary">🔔 Alert</button>
+          <button id="btnLikeModal" class="btn-secondary">👍 Like</button>
+          <button id="btnDislikeModal" class="btn-secondary">👎 Dislike</button>
+          <button id="btnCompareModal" class="btn-secondary col-span-2">📊 Compare</button>
+          <a id="btnBuyModal" target="_blank" rel="nofollow sponsored" class="btn-primary col-span-2 text-center">↗️ Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Compare Drawer -->
+<div id="compareDrawer" class="fixed bottom-0 left-0 right-0 translate-y-full transition-transform duration-300 z-30">
+  <div class="mx-auto max-w-7xl bg-white shadow-[0_-20px_40px_rgba(0,0,0,0.1)] border-t border-slate-200 rounded-t-3xl p-4">
+    <div class="flex items-center justify-between mb-3">
+      <h4 class="font-bold text-lg">Compare</h4>
+      <button id="closeCompare" class="text-slate-500 hover:text-slate-900">Close ✕</button>
+    </div>
+    <div id="compareGrid" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+  </div>
+</div>
 
-  <section class="wrap newsletter">
-    <h2>Get price-drop alerts</h2>
-    <p>One email a day with the hottest AI-picked deals. Unsubscribe anytime.</p>
-    <form action="https://buttondown.email/api/emails/embed-subscribe/neurostartai" method="post" target="_blank">
-      <input type="email" name="email" placeholder="your@email" required class="input">
-      <button class="btn">Subscribe</button>
-    </form>
-    <small>Affiliate note: We may earn a commission at no extra cost to you.</small>
-  </section>
+  <!-- Footer -->
+<footer class="border-t border-slate-200 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-8 text-sm text-slate-600 flex flex-col md:flex-row items-center justify-between gap-3">
+    <p>© <span id="year"></span> NeuroStart.ai — Affiliate disclosure: we may earn commissions.</p>
+    <nav class="flex gap-4">
+      <a class="hover:text-slate-900" href="./privacy.html">Privacy</a>
+      <a class="hover:text-slate-900" href="mailto:poolajithendra@gmail.com">Contact</a>
+      <a class="hover:text-slate-900" href="./feed.xml">RSS</a>
+    </nav>
+  </div>
+</footer>
 
-  <footer class="wrap footer">
-    <p>© <span id="year"></span> NeuroStart.ai • Made with 💙 in India • <a href="robots.txt">robots</a> • <a href="sitemap.xml">sitemap</a></p>
-  </footer>
 </body>
 </html>

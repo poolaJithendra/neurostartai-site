@@ -1,0 +1,26 @@
+<!-- Deal Modal -->
+<div id="dealModal" class="fixed inset-0 hidden items-center justify-center z-30">
+  <div class="absolute inset-0 bg-black/50" data-close-modal></div>
+  <div class="relative bg-white rounded-2xl shadow-2xl max-w-3xl w-[92%] overflow-hidden">
+    <div class="flex flex-col md:flex-row">
+      <img id="modalImage" src="" alt="" class="md:w-1/2 h-64 md:h-auto object-cover">
+      <div class="p-5 md:w-1/2">
+        <h3 id="modalTitle" class="text-xl font-bold"></h3>
+        <p id="modalDesc" class="text-slate-600 mt-2 text-sm"></p>
+        <div class="flex items-center gap-3 mt-3">
+          <span id="modalPriceNow" class="text-2xl font-extrabold text-blue-700"></span>
+          <span id="modalPriceWas" class="line-through text-slate-500"></span>
+          <span id="modalOff" class="ml-auto inline-block px-2 py-1 rounded-full text-xs bg-blue-50 text-blue-700 border border-blue-200"></span>
+        </div>
+        <div class="mt-4 grid grid-cols-2 gap-2">
+          <button id="btnSaveModal" class="btn-secondary">❤️ Save</button>
+          <button id="btnAlertModal" class="btn-secondary">🔔 Alert</button>
+          <button id="btnLikeModal" class="btn-secondary">👍 Like</button>
+          <button id="btnDislikeModal" class="btn-secondary">👎 Dislike</button>
+          <button id="btnCompareModal" class="btn-secondary col-span-2">📊 Compare</button>
+          <a id="btnBuyModal" target="_blank" rel="nofollow sponsored" class="btn-primary col-span-2 text-center">↗️ Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

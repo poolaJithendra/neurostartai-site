@@ -1,0 +1,26 @@
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--fg);transition:background .25s,color .25s}
+:root{--bg:#0b0d12;--fg:#eef2ff;--muted:#a5b4fc;--card:#121623;--card2:#0f1420;--brand:#6366f1;--accent:#22d3ee}
+.wrap{max-width:1100px;margin:0 auto;padding:18px}
+header{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;gap:10px;align-items:center}
+.logo{font-weight:800;color:var(--fg);text-decoration:none;font-size:20px}
+.tag{color:var(--muted);font-size:14px}
+.navlink{color:var(--muted);margin-left:14px;text-decoration:none}
+.navlink.active{color:#fff}
+.toolbar{display:grid;grid-template-columns:1fr 200px 220px 60px;gap:10px;margin-top:8px}
+.input,.select{background:var(--card2);color:var(--fg);border:1px solid #1f2937;border-radius:10px;padding:10px}
+.btn{background:linear-gradient(90deg,var(--brand),var(--accent));border:none;color:white;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:18px}
+.card{background:var(--card);border:1px solid #1f2937;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.25);display:flex;flex-direction:column}
+.thumb{width:100%;aspect-ratio:1/1;object-fit:cover;background:#0a0f1a}
+.card .pad{padding:12px}
+.title{font-weight:700;margin:8px 0}
+.meta{display:flex;justify-content:space-between;color:#c7d2fe;font-size:14px}
+.badge{background:#111827;color:#c7d2fe;border:1px solid #1f2937;border-radius:999px;padding:3px 8px;font-size:12px}
+.actions{display:flex;gap:8px;margin-top:10px}
+a.btnlink{display:inline-block;text-align:center;text-decoration:none;background:#0ea5e9;color:#001229;font-weight:800;border-radius:10px;padding:10px 12px}
+a.ghost{background:#111827;color:#c7d2fe}
+.newsletter{margin:40px 0;background:var(--card);padding:24px;border:1px solid #1f2937;border-radius:16px}
+.footer{color:#94a3b8}
+.light{:root{--bg:#f7f8ff;--fg:#0b1020;--card:#fff;--card2:#eef2ff;--muted:#475569}}
+@media(max-width:760px){.toolbar{grid-template-columns:1fr 1fr;grid-auto-rows:auto}}

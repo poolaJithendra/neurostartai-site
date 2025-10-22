@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeuroStart.ai — Best Deals in India</title>
+  <meta name="description" content="AI-curated deals for India: gadgets, beauty, home, fitness — updated daily.">
+  <meta property="og:title" content="NeuroStart.ai — Best Deals in India">
+  <meta property="og:description" content="AI-curated deals for India — updated daily.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="icons/og.png">
+  <link rel="icon" href="icons/favicon.ico">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="deals.js"></script>
+  <script defer src="script.js"></script>
+  <script type="application/ld+json" id="ld"></script>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand">
+      <a href="./" class="logo">🧠 NeuroStart.ai</a>
+      <span class="tag">AI-curated deals • India</span>
+    </div>
+    <nav class="nav">
+      <a href="./" class="navlink active">Home</a>
+      <a href="feed.xml" class="navlink">RSS</a>
+      <a href="mailto:hello@example.com" class="navlink">Contact</a>
+    </nav>
+  </header>
+
+  <section class="toolbar wrap">
+    <input id="q" class="input" placeholder="Search products, brands..." />
+    <select id="cat" class="select">
+      <option value="">All categories</option>
+      <option>Digital & Gadgets</option>
+      <option>Beauty</option>
+      <option>Home</option>
+      <option>Fitness</option>
+      <option>Gifts</option>
+      <option>Pets</option>
+    </select>
+    <select id="sort" class="select">
+      <option value="score">Sort by: AI score</option>
+      <option value="discount">Sort by: Discount %</option>
+      <option value="price_low">Price: Low → High</option>
+      <option value="price_high">Price: High → Low</option>
+      <option value="new">Newest</option>
+    </select>
+    <button id="dark" class="btn">🌓</button>
+  </section>
+
+  <main class="wrap">
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <section class="wrap newsletter">
+    <h2>Get price-drop alerts</h2>
+    <p>One email a day with the hottest AI-picked deals. Unsubscribe anytime.</p>
+    <form action="https://buttondown.email/api/emails/embed-subscribe/neurostartai" method="post" target="_blank">
+      <input type="email" name="email" placeholder="your@email" required class="input">
+      <button class="btn">Subscribe</button>
+    </form>
+    <small>Affiliate note: We may earn a commission at no extra cost to you.</small>
+  </section>
+
+  <footer class="wrap footer">
+    <p>© <span id="year"></span> NeuroStart.ai • Made with 💙 in India • <a href="robots.txt">robots</a> • <a href="sitemap.xml">sitemap</a></p>
+  </footer>
+</body>
+</html>
